@@ -88,9 +88,10 @@ public class NumbersActivity extends AppCompatActivity {
             @Override
 
                 public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                releaseMediaPlayer();
+
                     // Get the {@link Word} object at the given position the user clicked on
                     Word word = words.get(position);
+                releaseMediaPlayer();
                 int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
                         AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
                 if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
